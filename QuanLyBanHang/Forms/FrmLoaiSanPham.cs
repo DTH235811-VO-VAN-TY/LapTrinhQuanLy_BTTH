@@ -70,6 +70,11 @@ namespace QuanLyBanHang.Forms
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dgvLoaiSanPham.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             xuLyThem = false;
             BatTatChucNang(true);
             id = Convert.ToInt32(dgvLoaiSanPham.CurrentRow.Cells["ID"].Value.ToString());

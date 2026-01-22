@@ -29,18 +29,24 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnThoat = new Button();
+            btnHuyBo = new Button();
+            label1 = new Label();
+            btnXoa = new Button();
+            btnSua = new Button();
+            btnThem = new Button();
+            btnLuu = new Button();
             groupBox2 = new GroupBox();
             dgvHangSanXuat = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             TenHangSanXuat = new DataGridViewTextBoxColumn();
-            btnThoat = new Button();
-            btnHuyBo = new Button();
-            btnXoa = new Button();
-            btnSua = new Button();
-            btnLuu = new Button();
-            btnThem = new Button();
-            txtTenHangSanXuat = new TextBox();
-            label1 = new Label();
+            txtGhiChuHD = new TextBox();
+            label2 = new Label();
+            txtNhanVienID = new TextBox();
+            label3 = new Label();
+            txtKhachHangID = new TextBox();
+            label4 = new Label();
+            dtpNgayLapHoaDon = new DateTimePicker();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHangSanXuat).BeginInit();
@@ -48,11 +54,17 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dtpNgayLapHoaDon);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnHuyBo);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(txtKhachHangID);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtNhanVienID);
             groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(txtGhiChuHD);
             groupBox1.Controls.Add(btnXoa);
-            groupBox1.Controls.Add(txtTenHangSanXuat);
             groupBox1.Controls.Add(btnSua);
             groupBox1.Controls.Add(btnThem);
             groupBox1.Controls.Add(btnLuu);
@@ -62,6 +74,77 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin sinh viên";
+            // 
+            // btnThoat
+            // 
+            btnThoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnThoat.Location = new Point(840, 150);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(94, 29);
+            btnThoat.TabIndex = 8;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // btnHuyBo
+            // 
+            btnHuyBo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnHuyBo.Location = new Point(722, 150);
+            btnHuyBo.Name = "btnHuyBo";
+            btnHuyBo.Size = new Size(94, 29);
+            btnHuyBo.TabIndex = 9;
+            btnHuyBo.Text = "Hủy bỏ ";
+            btnHuyBo.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(144, 20);
+            label1.TabIndex = 5;
+            label1.Text = "Ngày lập hóa đơn(*)";
+            // 
+            // btnXoa
+            // 
+            btnXoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnXoa.ForeColor = Color.Red;
+            btnXoa.Location = new Point(591, 150);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(94, 29);
+            btnXoa.TabIndex = 10;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            btnSua.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnSua.Location = new Point(450, 150);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(94, 29);
+            btnSua.TabIndex = 11;
+            btnSua.Text = "Sữa";
+            btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            btnThem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnThem.Location = new Point(171, 150);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(94, 29);
+            btnThem.TabIndex = 7;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            // 
+            // btnLuu
+            // 
+            btnLuu.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnLuu.ForeColor = Color.Blue;
+            btnLuu.Location = new Point(299, 150);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(94, 29);
+            btnLuu.TabIndex = 12;
+            btnLuu.Text = "Lưu";
+            btnLuu.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -105,83 +188,61 @@
             TenHangSanXuat.Name = "TenHangSanXuat";
             TenHangSanXuat.ReadOnly = true;
             // 
-            // btnThoat
+            // txtGhiChuHD
             // 
-            btnThoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnThoat.Location = new Point(845, 110);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(94, 29);
-            btnThoat.TabIndex = 8;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = true;
+            txtGhiChuHD.Location = new Point(601, 33);
+            txtGhiChuHD.Name = "txtGhiChuHD";
+            txtGhiChuHD.Size = new Size(243, 27);
+            txtGhiChuHD.TabIndex = 6;
             // 
-            // btnHuyBo
+            // label2
             // 
-            btnHuyBo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnHuyBo.Location = new Point(727, 110);
-            btnHuyBo.Name = "btnHuyBo";
-            btnHuyBo.Size = new Size(94, 29);
-            btnHuyBo.TabIndex = 9;
-            btnHuyBo.Text = "Hủy bỏ ";
-            btnHuyBo.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(475, 40);
+            label2.Name = "label2";
+            label2.Size = new Size(120, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Ghi chú hóa đơn:";
             // 
-            // btnXoa
+            // txtNhanVienID
             // 
-            btnXoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(596, 110);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(94, 29);
-            btnXoa.TabIndex = 10;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = true;
+            txtNhanVienID.Location = new Point(171, 72);
+            txtNhanVienID.Name = "txtNhanVienID";
+            txtNhanVienID.Size = new Size(243, 27);
+            txtNhanVienID.TabIndex = 6;
             // 
-            // btnSua
+            // label3
             // 
-            btnSua.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnSua.Location = new Point(455, 110);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(94, 29);
-            btnSua.TabIndex = 11;
-            btnSua.Text = "Sữa";
-            btnSua.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Location = new Point(21, 75);
+            label3.Name = "label3";
+            label3.Size = new Size(99, 20);
+            label3.TabIndex = 5;
+            label3.Text = "Nhân Viên ID:";
             // 
-            // btnLuu
+            // txtKhachHangID
             // 
-            btnLuu.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnLuu.ForeColor = Color.Blue;
-            btnLuu.Location = new Point(304, 110);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(94, 29);
-            btnLuu.TabIndex = 12;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
+            txtKhachHangID.Location = new Point(601, 72);
+            txtKhachHangID.Name = "txtKhachHangID";
+            txtKhachHangID.Size = new Size(243, 27);
+            txtKhachHangID.TabIndex = 6;
             // 
-            // btnThem
+            // label4
             // 
-            btnThem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnThem.Location = new Point(176, 110);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(94, 29);
-            btnThem.TabIndex = 7;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(475, 79);
+            label4.Name = "label4";
+            label4.Size = new Size(89, 20);
+            label4.TabIndex = 5;
+            label4.Text = "Khách Hàng";
             // 
-            // txtTenHangSanXuat
+            // dtpNgayLapHoaDon
             // 
-            txtTenHangSanXuat.Location = new Point(168, 62);
-            txtTenHangSanXuat.Name = "txtTenHangSanXuat";
-            txtTenHangSanXuat.Size = new Size(1006, 27);
-            txtTenHangSanXuat.TabIndex = 6;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(19, 62);
-            label1.Name = "label1";
-            label1.Size = new Size(146, 20);
-            label1.TabIndex = 5;
-            label1.Text = "Tên hãng sản xuất(*):";
+            dtpNgayLapHoaDon.Format = DateTimePickerFormat.Custom;
+            dtpNgayLapHoaDon.Location = new Point(172, 31);
+            dtpNgayLapHoaDon.Name = "dtpNgayLapHoaDon";
+            dtpNgayLapHoaDon.Size = new Size(242, 27);
+            dtpNgayLapHoaDon.TabIndex = 13;
             // 
             // FrmHoaDon
             // 
@@ -214,5 +275,12 @@
         private Button btnSua;
         private Button btnThem;
         private Button btnLuu;
+        private Label label4;
+        private Label label3;
+        private TextBox txtKhachHangID;
+        private Label label2;
+        private TextBox txtNhanVienID;
+        private TextBox txtGhiChuHD;
+        private DateTimePicker dtpNgayLapHoaDon;
     }
 }
